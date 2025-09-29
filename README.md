@@ -91,12 +91,12 @@ Cada participante, realizará un commit a su repositorio local cada vez que inco
    - El formato de la tabla será:  
 
 ```markdown
-| Camino básico | Nombre del caso                       | Entrada / Estado                                              | Valor esperado                                                             |
-|---------------|---------------------------------------|---------------------------------------------------------------|----------------------------------------------------------------------------|
-| 1 → 2 → 4 → 6 | test_given_.... | Descripción del estado inicial de caso de prueba y de los parámetros del método   | Descripción de los asserts a comprobar en función a la especificación o de la excepción que se debe capturar   |
+| Camino básico | Nombre del caso                       | Entrada / Estado                                                | Valor esperado                                                                                                 |
+|---------------|---------------------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| 1 → 2 → 4 → 6 | test_given_.......................... | Descripción del estado inicial y de los parámetros del método   | Descripción de los asserts a comprobar en función a la especificación o de la excepción que se debe capturar   |
 |
 ```
-4. **Implementar los casos de prueba** en `ListaCursosTest.java` usando JUnit 5.
+4. **Implementar los casos de prueba** en `ListaCursosTest.java` usando JUnit 5 y reproduciendo el paquete de la clase objeto de la prueba en la carpeta de test.
   - Cada miembro del grupo deberá incorporar los casos de prueba en **su rama personal** y con posterioridad deberán quedar unificados en la rama principal. 
 5. Documentar en el `README.md` de cada rama los **errores detectados** en los métodos.  
 6. Añadir, si fuera necesario el dieño (usando una tabla parecida al ejercicio 3) e implementación de los casos de prueba mediante la técnica de **cobertura de condicionales** para el método `cursosPendientesPorTematica`, comprobando la vaidez con EclEmma, y añadir al `README.md` de la rama `main` un resumen con la documentación.  
