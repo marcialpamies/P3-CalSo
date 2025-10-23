@@ -47,7 +47,6 @@ La clase `ListaCursos` dispone de los siguientes métodos a analizar y probar:
 
 ---
 
----
 ## Forma de trabajo
 
 Se creará un repositorio de **GitHub** con el nombre `CalSo2526_P3-grupoXX`, donde XX representará el número de grupo.
@@ -76,18 +75,46 @@ flowchart TD
 
 En función del análisis inicial del código el grupo de trabajo se repartirá el código de análisis y se procederá a la elaboración de los grafos, identificación de la complejidad ciclomática, la identificción de caminos básicos, la propuesta de casos de prueba, tanto para la estrategia de caminos básicos como de cobertura de condicionales, y su respectiva documentación que se incorporará en un fichero `.md`. 
 
-Cada participante, realizará un commit a su repositorio local cada vez que incorpore un artefacto nuevo a la práctica (gráfico, teblas de diseño, código de casos de prueba...) y al concluir cada sesión de trabajo realizarán un push a su rama. Cuando ambos miembros concluiyan con la resolución de todo el trabajo repartido se procederá a establecer los `pull request` necesarios para unificar todos las acciones en la rama `main` donde se configurará la entrega final.
+Cada participante, realizará un commit a su repositorio local cada vez que incorpore un artefacto nuevo a la práctica (gráfico, tablas de diseño, código de casos de prueba...) y al concluir cada sesión de trabajo realizarán un push a su rama. Cuando ambos miembros concluiyan con la resolución de todo el trabajo repartido se procederá a establecer los `pull request` necesarios para unificar todos las acciones en la rama `main` donde se configurará la entrega final.
 
 ---
 
 ## Ejercicios propuestos
 
 1. **Dibujar el grafo de flujo** de cada método.
-  - En la documentación usar un subapartado para cada uno de los métodos. Cada participante en su rama y al finalizar el trabajo en la rama `main`. 
+  - En la documentación usar un subapartado para cada uno de los métodos. Cada participante en su rama y al finalizar el trabajo en la rama `main`.
+
+**Ejemplo**
+    
+  ```java
+  1. int suma = 0;
+  2. for (int i = 0; i < 5; i++) {
+  3.     if (i % 2 == 0) {
+  4.         suma += i;
+  5.     } else {
+  6.         suma -= i;
+  7.     }
+  8. }
+  9. System.out.println(suma);
+```
+
+```mermaid
+flowchart TD
+  A([Inicio]) --> B[1.]
+  B --> C[2.]
+  C --> D[3.]
+  D --> E[4.]
+  D --> F[5 - 6]
+  E --> G[7 - 8]
+  F --> G
+  G --> C
+  C --> H[9]
+```
+
 2. **Calcular la complejidad ciclomática** de cada método. 
-  - Se incorporará a su respectivo apartado. Cada participante en su rama y al finalizar el trabajo en la rama `main`. 
+  - Se incorporará a su respectivo subapartado. Cada participante en su rama y al finalizar el trabajo en la rama `main`. 
 3. **Identificar caminos básicos** y diseñar los casos de prueba correspondientes.  
-   - Cada miembro del grupo deberá incorporar en **su rama personal** en el archivo `README.md` y para el subapartado de cada método las tablas de casos de prueba.   
+   - Cada miembro del grupo deberá incorporar en el archivo `README.md` de **su rama personal**, para el subapartado, las tablas de casos de prueba.   
    - El formato de la tabla será:  
 
 ```markdown
@@ -97,9 +124,9 @@ Cada participante, realizará un commit a su repositorio local cada vez que inco
 |
 ```
 4. **Implementar los casos de prueba** en `ListaCursosTest.java` usando JUnit 5 y reproduciendo el paquete de la clase objeto de la prueba en la carpeta de test.
-  - Cada miembro del grupo deberá incorporar los casos de prueba en **su rama personal** y con posterioridad deberán quedar unificados en la rama principal. 
-5. Documentar en el `README.md` de cada rama los **errores detectados** en los métodos.  
-6. Añadir, si fuera necesario el dieño (usando una tabla parecida al ejercicio 3) e implementación de los casos de prueba mediante la técnica de **cobertura de condicionales** para el método `cursosPendientesPorTematica`, comprobando la vaidez con EclEmma, y añadir al `README.md` de la rama `main` un resumen con la documentación.  
+  - Cada miembro del grupo deberá incorporar los casos de prueba en **su rama personal**. Con posterioridad deberán quedar unificados en la rama principal. 
+5. Documentar en el `README.md` de cada rama los **errores detectados** en los métodos por los casos de prueba.  
+6. Añadir, si fuera necesario el dieño (usando una tabla parecida al ejercicio 3) e implementación de casos de prueba mediante la técnica de **cobertura de condicionales** para el método `cursosPendientesPorTematica`, comprobando la vaidez con EclEmma, y añadir al `README.md` de la rama `main` un resumen con la documentación.  
 
 ---
 
@@ -146,9 +173,9 @@ flowchart TB
 ## Evaluación
 
 - **Diagramas de flujo y complejidad ciclomática – 3.0 puntos**  
-- **Casos de prueba de `ListaCursos` – 3.0 puntos**   
-- **Documentación en README.md – 2.0 punto**  
+- **Casos de prueba de `ListaCursos` – 3.0 puntos**
+- **Casos de prueba con la técnica de cobertura de condicionales y análisis de cobertura - 2.0 puntos**     
+- **Documentación en README.md – 1.0 punto**  
 - **Trabajo en ramas y PR – 1.0 punto**  
-- **Cobertura con EclEmma – 1.0 punto**  
 
 Total: **10 puntos**
