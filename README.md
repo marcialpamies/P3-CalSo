@@ -111,22 +111,24 @@ flowchart TD
   C --> H[9]
 ```
 
-2. **Calcular la complejidad ciclomática** de cada método. 
+2. **Calcular la complejidad ciclomática** de cada método, utilizando las trés fórmulas en cada uno de ellos. 
   - Se incorporará a su respectivo subapartado. Cada participante en su rama y al finalizar el trabajo en la rama `main`. 
 3. **Identificar caminos básicos** y diseñar los casos de prueba correspondientes.  
    - Cada miembro del grupo deberá incorporar en el archivo `README.md` de **su rama personal**, para el subapartado, las tablas de casos de prueba.   
    - El formato de la tabla será:  
 
 ```markdown
-| Camino básico | Nombre del caso                       | Entrada / Estado                                                | Valor esperado                                                                                                 |
+| Camino básico | Nombre del caso                       | Entrada / Estado inicial                                               | Valor/Estado esperado                                                                                                 |
 |---------------|---------------------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | 1 → 2 → 4 → 6 | test_given_.......................... | Descripción del estado inicial y de los parámetros del método   | Descripción de los asserts a comprobar en función a la especificación o de la excepción que se debe capturar   |
 |
 ```
+  - Si alguno de los caminos no generara un caso de prueba se ebe indicar en la tabla dicha imposibilidad y argumentar la justificación de la misma.
+    
 4. **Implementar los casos de prueba** en `ListaCursosTest.java` usando JUnit 5 y reproduciendo el paquete de la clase objeto de la prueba en la carpeta de test.
   - Cada miembro del grupo deberá incorporar los casos de prueba en **su rama personal**. Con posterioridad deberán quedar unificados en la rama principal. 
-5. Documentar en el `README.md` de cada rama los **errores detectados** en los métodos por los casos de prueba.  
-6. Añadir, si fuera necesario el dieño (usando una tabla parecida al ejercicio 3) e implementación de casos de prueba mediante la técnica de **cobertura de condicionales** para el método `cursosPendientesPorTematica`, comprobando la vaidez con EclEmma, y añadir al `README.md` de la rama `main` un resumen con la documentación.  
+5. Documentar en el `README.md` de cada rama los **errores detectados** en los métodos por los casos de prueba y corregir los errores encontrados.  
+6. Argumentar, añadir, si fuera necesario, el dieño (usando una tabla parecida al ejercicio 3) y realizar la implementación de lso casos de prueba no contemplados en la tabla anterior que se obtengan mediante la técnica de **cobertura de condicionales** para el método `cursosPendientesPorTematica`. comprueba la vaidez con EclEmma, y añadir al `README.md` de la rama `main` un resumen con la documentación de los mismos.  
 
 ---
 
